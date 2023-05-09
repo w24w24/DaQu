@@ -1,0 +1,53 @@
+html, body, .main {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .top-bar {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.main .box {
+  flex: 1;
+  padding-top: 50px;
+  margin-left: 0;
+}
+
+.main .box .sideMenu {
+  margin-left: 0;
+  padding: 0;
+  border: 0;
+}
+
+.main .box .homeContainer {
+  padding: 20px;
+}
+
+.main .box .homeContainer .maincontent {
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.userProfile {
+  display: flex;
+}
+
+.userProfile > div {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#carouselExampleCaptions {
+  height: 100%;
+}

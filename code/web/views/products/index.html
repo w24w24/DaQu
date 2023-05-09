@@ -1,0 +1,62 @@
+<!--
+ * @Author: 谭磊 2928331677@qq.com
+ * @Date: 2023-05-08 13:02:47
+ * @LastEditors: 谭磊 2928331677@qq.com
+ * @LastEditTime: 2023-05-08 20:22:09
+ * @FilePath: \code\web\views\products\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 bootstrap.css 文件 -->
+  <link rel="stylesheet" href="/admin/lib/css/bootstrap.css">
+  <link rel="stylesheet" href="/admin/views/home/index.css">
+  <!-- 引入 bootstrap.js 文件 -->
+  <script src="/admin/lib/JS/bootstrap.bundle.js"></script>
+  <!-- 引入 lodash.js -->
+  <script src="/web/lib/lodash.js"></script>
+  <!-- 引入图片 -->
+</head>
+<body>
+  <!-- 这里是 HTML -->
+  <div class="main">
+    <!-- 顶部栏 -->
+    <div class="top-bar"></div>
+    <!-- 这是主要内容区域 -->
+    <div class="box">
+      <!-- 这里是 产品与服务 轮播图 -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <!-- 指示器 -->
+        <div class="carousel-indicators"></div>
+        <!-- 轮播图 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div style="background-image: url('/db/public/8.jpg');width: 100%;height:calc(100vh - 50px);background-size: cover;"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>每一次发布都有新的感悟</h1>
+              <p>达趣新闻·追逐热点时刻</p>
+            </div>
+          </div>
+        </div>
+        <!-- 左右按钮 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 这里是 script -->
+  <script src="index.js" type="module"></script>
+</body>
+</html>

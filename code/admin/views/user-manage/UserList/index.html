@@ -1,0 +1,140 @@
+<!--
+ * @Author: 谭磊 2928331677@qq.com
+ * @Date: 2023-05-05 12:17:54
+ * @LastEditors: 谭磊 2928331677@qq.com
+ * @LastEditTime: 2023-05-07 19:31:17
+ * @FilePath: \code\admin\views\home\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 bootstrap.css 文件 -->
+  <link rel="stylesheet" href="/admin/lib/css/bootstrap.css">
+  <link rel="stylesheet" href="/admin/views/home/index.css">
+  <!-- 引入 bootstrap.js 文件 -->
+  <script src="/admin/lib/JS/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <!-- 这里是 HTML -->
+  <div class="main">
+    <!-- 顶部栏 -->
+    <div class="top-bar">
+      
+    </div>
+
+    <!-- 这是主要内容区域 -->
+    <div class="box">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- 内容侧边栏 -->
+          <div class="col-2 sideMenu">
+            
+          </div>
+          <!-- home 主要内容展示区域 -->
+          <div class="col-10 homeContainer">
+            <div class="maincontent">
+              <!-- 面包屑 -->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item" aria-current="page">用户管理</li>
+                  <li class="breadcrumb-item active" aria-current="page">用户列表</li>
+                </ol>
+              </nav>
+              <!-- 用户列表展示 -->
+              <table class="table">
+                <thead>
+                  <!-- 表头 -->
+                  <tr>
+                    <th scope="col">用户名</th>
+                    <th scope="col">头像</th>
+                    <th scope="col">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="listbody">
+                  <!-- 表单数据: 在index.js 中通过映射得到 -->
+                  
+                </tbody>
+              </table>
+              <!-- 个人信息展示 -->
+              <div class="userProfile"></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 这里是 编辑 模态框 -->
+  <!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">编辑用户</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editUserform">
+          <!-- 用户名 -->
+          <div class="mb-3">
+            <label for="username" class="form-label">用户名</label>
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" required>
+          </div>
+          <!-- 密码 -->
+          <div class="mb-3">
+            <label for="password" class="form-label">用户密码</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <!-- 个人简介 -->
+          <div class="mb-3">
+            <label for="introduction" class="form-label">个人简介</label>
+            <textarea class="form-control" id="introduction" rows="5"></textarea>
+          </div>
+          <!-- 用户自定义 头像 -->
+          <div class="mb-3">
+            <label for="photofile" class="form-label">上传头像</label>
+            <input type="file" class="form-control" id="photofile">
+          </div>
+          <!-- 确认 添加用户 按钮 -->
+          <button type="submit" class="btn btn-primary">添加用户</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="editConfirm">更新</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 这里是 删除 模态框 -->
+  <!-- Modal -->
+  <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:red;">删除提示信息</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- 删除 提示信息 -->
+          您确定要删除当前用户吗?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="delConfirm">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 这里是 script -->
+  <script src="index.js" type="module">
+    
+  </script>
+</body>
+</html>

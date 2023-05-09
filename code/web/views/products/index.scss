@@ -1,0 +1,15 @@
+@import "..\\style.scss";
+
+.userProfile{
+  display: flex;
+  >div{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+#carouselExampleCaptions{
+  height: 100%;
+}
